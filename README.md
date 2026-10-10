@@ -174,9 +174,15 @@ ENTRYPOINT ["java", "-jar", "app.jar"]
 ## 6. Kết quả thực hiện & Bằng chứng nộp bài
 
 ### 6.1. Ảnh chụp sơ đồ biểu đồ 2 Job kết nối thành công (Mũi tên từ test -> docker-build)
+- **Minh chứng thực tế trên GitHub Actions**: [Workflow Run #38057444657 (Success)](https://github.com/quang0510/IT_209_Session11_Bai5/actions/runs/38057444657)
+- Cả 2 Job hoàn thành màu xanh, xuất hiện mũi tên từ `test` sang `docker-build`:
+
 ![Workflow Graph Connected](screenshots/workflow_graph_connected.png)
 
 ### 6.2. Ảnh chụp xác nhận trường hợp Test lỗi -> docker-build tự động Skipped
+- **Minh chứng thực tế trên GitHub Actions**: [Workflow Run #38058679435 (Failed & Skipped)](https://github.com/quang0510/IT_209_Session11_Bai5/actions/runs/38058679435)
+- Khi JUnit test bị đứt, Job `test` báo đỏ và Job `docker-build` tự động chuyển trạng thái `Skipped`:
+
 ![Job Skipped when Test Fails](screenshots/job_skipped.png)
 
 ---
