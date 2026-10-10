@@ -17,11 +17,12 @@ class Bai5ApplicationTests {
     }
 
     @Test
-    @DisplayName("Kiểm tra Unit Test thành công - Trạng thái xanh")
+    @DisplayName("Kiểm tra Unit Test - Cố tình làm fail để kiểm tra Job docker-build bị Skipped")
     void testSampleLogicSuccess() {
         int expected = 10;
         int actual = 5 + 5;
-        assertEquals(expected, actual, "Phép tính cộng phải trả về kết quả 10");
+        // Cố tình làm fail test để kiểm tra cơ chế 'needs: test'
+        assertEquals(999, actual, "Cố tình làm fail test: mong muốn 999 nhưng thực tế là 10");
     }
 
     /*
